@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Page d'Agence</title>
+  <!-- Ajouter Font Awesome pour les icônes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    /* Arrière-plan de nature */
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('https://www.capesymphony.org/images/news/201819Season/201920_Season/CS_Blog20_2.jpg');
+      background-size: cover;
+      background-position: center;
+      color: black; /* Correction de la couleur de texte */
+      padding: 40px;
+    }
+    
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      font-size: 0.9em;
+    }
+
+    .doctor-name {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    .date-time {
+      font-size: 1em;
+      text-align: right;
+    }
+
+    .description {
+      margin-top: 30px;
+      font-size: 0.9em;
+    }
+
+    .work-hours {
+      margin-top: 20px;
+      font-size: 0.9em;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+    }
+
+    th {
+      background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    a {
+      color: #00aced;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Style du lien "Spécialités" */
+    .specialties-link {
+      display: block;
+      margin-top: 50px;
+      font-size: 1.3em;
+      text-align: center;
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 5px;
+    }
+
+    /* Sticker pour le téléphone et l'adresse */
+    .info-item {
+      display: flex;
+      align-items: right;
+      margin-top: 0.1px;
+    }
+
+    .info-item i {
+      margin-right: 15px;
+      font-size: 1em;
+      color: #00aced;
+    }
+
+    .info-item span {
+      font-size: 1em;
+    }
+
+    .sticker {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 5px 15px;
+      border-radius: 90%;
+      font-size: 0.7em;
+      margin-left: 10px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- En-tête avec le nom du docteur et la date/heure -->
+  <div class="header">
+    <div class="doctor-name">
+      Dr. <i>Bouzouita Asma Dourayet</i>
+    </div>
+    <div class="date-time" id="date-time">
+      <!-- La date et l'heure seront insérées par le script JavaScript -->
+    </div>
+  </div>
+
+  <!-- Description de l'agence -->
+  <div class="description">
+    <p> Docteur en Médecine Générale </p>
+    <p>Praticienne en Hypnose Ericksonienne</p>
+    <p>Coach de vie et Médical</p>
+    <p>Mésothérapie Médicale</p>
+  </div>
+
+  <!-- Horaires de travail -->
+  <div class="work-hours">
+    <h3>Nos Horaires de Travail</h3>
+    <p>Lundi - Vendredi : 8h30 - 16h00</p>
+    <p>Samedi : 8h30 - 13h00</p>
+    <p>Dimanche : Fermé</p>
+  </div>
+
+  <!-- Informations de contact -->
+  <div class="info-item">
+    <i class="fas fa-phone"></i>
+    <span>+ 216 98 510 498</span>
+    <div class="sticker">Tel</div>
+  </div>
+   <!-- Informations de contact -->
+  <div class="info-item">
+    <i class="fas fa-phone"></i>
+    <span>+ 216 71 711 366</span>
+    <div class="sticker">Tel</div>
+  </div>
+
+  <div class="info-item">
+    <i class="fas fa-map-marker-alt"></i>
+  <p> 34, Av Habib Bourguiba - Imm "Le Petit Palais" </p>
+     <p> App.N°A23-2émé étage-Ariana </p>
+    <div class="sticker">Adresse</div>
+  </div>
+
+
+  <!-- Lien vers "Spécialités" -->
+ <a href="file:///C:/Users/senda/Desktop/%D8%AF%D9%83%D8%AA%D9%88%D8%B1%20%D8%A8%D9%88%D8%B2%D9%88%D9%8A%D8%AA%D8%A9%20%D8%A7%D8%B3%D9%85%D8%A9.html" class="specialties-link" target="_blank">Arabe "العربية"</a>
+
+
+
+  <!-- Script pour afficher la date et l'heure en haut à droite -->
+  <script>
+    function updateDateTime() {
+      const now = new Date();
+      const date = now.toLocaleDateString('fr-FR');
+      const time = now.toLocaleTimeString('fr-FR');
+      document.getElementById('date-time').textContent = date + ' ' + time;
+    }
+    setInterval(updateDateTime, 1000); // Mise à jour toutes les secondes
+    updateDateTime(); // Initialiser immédiatement
+  </script>
+
+</body>
+</html>
